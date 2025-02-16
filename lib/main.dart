@@ -1,39 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:note_app/views/notes_view.dart';
 
 void main() {
   runApp(const NotesApp());
 }
-
 class NotesApp extends StatelessWidget {
   const NotesApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: Colors.grey.shade900,
       ),
-      home: const HomeScreen(),
+      home: const NotesView(),
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Notes'),
-        centerTitle: true,
-      ),
-    );
-  }
-}
 
 
 
