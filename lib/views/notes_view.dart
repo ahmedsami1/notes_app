@@ -3,6 +3,8 @@ import 'package:note_app/views/widgets/add_note_bottom_sheet.dart';
 
 import 'package:note_app/views/widgets/notes_view_body.dart';
 
+import '../constants.dart';
+
 class NotesView extends StatelessWidget {
   const NotesView({super.key});
 
@@ -22,7 +24,7 @@ class NotesView extends StatelessWidget {
               }
           );
         },
-        backgroundColor: Color(0xFFFFF59D),
+        backgroundColor: kPrimaryColor,
         elevation: 8.0,
         child: Icon(
           Icons.add,
