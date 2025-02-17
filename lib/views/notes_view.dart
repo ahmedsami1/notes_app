@@ -11,6 +11,16 @@ class NotesView extends StatelessWidget {
       body: SafeArea(
         child: NotesViewBody(),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Color(0xFFFFF59D),
+        elevation: 8.0,
+        child: Icon(
+          Icons.add,
+          color: Colors.black87,
+          size: 32.0,
+        ),
+      ),
     );
   }
 }
