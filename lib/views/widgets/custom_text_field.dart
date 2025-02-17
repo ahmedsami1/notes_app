@@ -6,28 +6,28 @@ class CustomFormTextField extends StatelessWidget {
   CustomFormTextField({
     super.key,
     required this.hintText,
-    required this.labelText,
     required this.onChanged,
     this.keyboardType,
     this.onTapSuffixIcon,
     this.obscureText = false,
     this.contentPadding = 16,
+    this.maxLine = 1,
 
   });
 
   final String hintText;
-  final String labelText;
   Function(String) onChanged;
   TextInputType? keyboardType;
   VoidCallback? onTapSuffixIcon;
   bool? obscureText;
   double contentPadding;
+  int maxLine;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       cursorColor: kPrimaryColor,
-      maxLines: null,
+      maxLines: maxLine,
       onChanged: onChanged,
       obscureText: obscureText!,
       keyboardType: keyboardType,
@@ -35,12 +35,6 @@ class CustomFormTextField extends StatelessWidget {
         contentPadding: EdgeInsets.symmetric(vertical: contentPadding, horizontal: 14),
         hintText: hintText,
         hintStyle: TextStyle(
-          color: kPrimaryColor,
-          fontSize: 10,
-        ),
-        labelText: labelText,
-        labelStyle: TextStyle(
-          color: kPrimaryColor,
           fontSize: 10,
         ),
         fillColor: Colors.grey.shade900,
