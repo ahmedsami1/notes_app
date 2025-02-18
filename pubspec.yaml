@@ -34,6 +34,8 @@ dependencies:
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   path_provider_android: ^2.2.15
+  flutter_bloc: ^9.0.0
+  
 
 
 dev_dependencies:
