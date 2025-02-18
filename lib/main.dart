@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart' show Hive;
 import 'package:hive_flutter/hive_flutter.dart';
 
 import 'package:note_app/views/notes_view.dart';
