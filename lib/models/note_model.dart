@@ -8,6 +8,6 @@ class NoteModel{
     required this.title,
     required this.subTitle,
     required this.date,
-    required this.color
+    required this.color,
   });
 }
