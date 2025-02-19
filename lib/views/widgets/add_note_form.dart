@@ -59,7 +59,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                       title: title!,
                       subTitle: subTitle!,
                       date: DateTime.now().toString(),
-                      color: Colors.blue.value,
+                      color: Colors.blue.hashCode,
                     );
                     BlocProvider.of<AddNoteCubit>(context).addNote(noteModel);
                   } else {
@@ -70,7 +70,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
               );
             },
           ),
-
+          SizedBox(height: 16.0),
         ],
       ),
     );
