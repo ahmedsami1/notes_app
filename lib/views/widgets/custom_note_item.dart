@@ -10,7 +10,7 @@ class NoteItem extends StatelessWidget {
     required this.note,
   });
   final Color color;
-  final NoteModel? note;
+  final NoteModel note;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class NoteItem extends StatelessWidget {
             children: [
               ListTile(
                 title: Text(
-                  note!.title,
+                  note.title,
                   style: const TextStyle(
                     color: Colors.black,
                     fontSize: 20.0,
@@ -43,7 +43,7 @@ class NoteItem extends StatelessWidget {
                 subtitle: Padding(
                   padding: const EdgeInsets.only(top: 16.0),
                   child: Text(
-                    note!.subTitle,
+                    note.subTitle,
                     overflow: TextOverflow.ellipsis,
                     maxLines: 2,
                     style: TextStyle(
@@ -53,7 +53,9 @@ class NoteItem extends StatelessWidget {
                   ),
                 ),
                 trailing: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    note.delete();
+                  },
                   icon: const Icon(
                     Icons.delete_rounded,
                     color: Colors.black,
@@ -64,7 +66,7 @@ class NoteItem extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(right: 24.0, top: 16.0),
                 child: Text(
-                    note!.date,
+                    note.date,
                     style: TextStyle(
                       color: Colors.black.withAlpha(126),
                       fontSize: 12.0,
