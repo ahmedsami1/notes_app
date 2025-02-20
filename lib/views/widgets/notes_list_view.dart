@@ -38,7 +38,7 @@ class NotesListView extends StatelessWidget {
               itemBuilder: (context, index) =>
                   NoteItem(
                     color: colors[index],
-
+                    note: notes[index],
                   ),
 
             ),
